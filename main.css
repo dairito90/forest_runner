@@ -1,0 +1,36 @@
+body {
+    background-image: url(countryside.jpg);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    margin:0 ;
+}
+
+
+
+.runner {
+    position: absolute;
+    top:300px;
+    left: 0px;
+    right: 0px;
+    width: 256px;
+    height: 256px;
+    background-image: url(runner.png);
+    margin-right:100%;
+    animation: play 1s steps(6)infinite, slide 20s steps(100) infinite;
+}
+
+
+
+
+@keyframes play {
+
+    100% {
+        background-position: -1536px;
+    }
+}
+
+@keyframes slide {
+    100% {
+        margin-right: -256px;
+    }
+}
