@@ -8,15 +8,14 @@ body {
 
 
 .runner {
-    position: absolute;
+    position: fixed;
     top:300px;
     left: 0px;
-    right: 0px;
     width: 256px;
     height: 256px;
     background-image: url(runner.png);
-    margin-right:100%;
-    animation: play 1s steps(6)infinite, slide 20s steps(100) infinite;
+
+    animation: play 1s steps(6)infinite, slide 10s steps(100) infinite;
 }
 
 
@@ -31,6 +30,61 @@ body {
 
 @keyframes slide {
     100% {
-        margin-right: -256px;
+        left: calc(60% - 256px);
+    }
+}
+
+
+
+
+.fox {
+    position: fixed;
+    top:400px;
+    left: 100%;
+    width: 153px;
+    height: 153px;
+    background-image: url(mainfox.png);
+    animation: fox 0.8s steps(20)infinite, searching 10s steps(100) infinite;
+}
+
+
+
+
+@keyframes fox {
+
+    100% {
+        background-position: -3060px;
+    }
+}
+
+@keyframes searching {
+    100% {
+        left: 60%;
+    }
+}
+
+
+
+
+.clouds {
+    position: fixed;
+    top:100px;
+    right: 0;
+    width: 153px;
+    height: 153px;
+    background-image: url(clouds.png);
+    animation: clouds 60s steps(10)infinite, moving 40s steps(100) infinite;
+}
+
+@keyframes clouds {
+
+    100% {
+        background-position: -1600px;
+    }
+}
+
+@keyframes moving {
+    100% {
+        right: 100%;
     }
 }
